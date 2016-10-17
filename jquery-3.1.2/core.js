@@ -417,6 +417,7 @@ jQuery.extend( {
 
 	// Bind a function to a context, optionally partially applying any
 	// arguments.
+	// 为函数更换指定上下文
 	proxy: function( fn, context ) {
 		var tmp, args, proxy;
 
@@ -433,6 +434,7 @@ jQuery.extend( {
 		}
 
 		// Simulated bind
+        // 模拟bind方法，通过闭包获取上下文中的变量，然后返回apply方法指定上下文之后的函数
 		args = slice.call( arguments, 2 );
 		proxy = function() {
 			return fn.apply( context || this, args.concat( slice.call( arguments ) ) );
