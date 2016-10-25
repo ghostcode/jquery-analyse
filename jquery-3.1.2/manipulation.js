@@ -454,7 +454,7 @@ jQuery.fn.extend( {
 		}, ignored );
 	}
 } );
-
+//提供类似操作，传参不同的方法
 jQuery.each( {
 	appendTo: "append",
 	prependTo: "prepend",
@@ -471,6 +471,7 @@ jQuery.each( {
 
 		for ( ; i <= last; i++ ) {
 			elems = i === last ? this : this.clone( true );
+//还是应用了上面的方法
 			jQuery( insert[ i ] )[ original ]( elems );
 
 			// Support: Android <=4.0 only, PhantomJS 1 only
