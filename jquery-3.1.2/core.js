@@ -149,7 +149,8 @@ jQuery.extend = jQuery.fn.extend = function() {
 		target = {};
 	}
 
-	// Extend jQuery itself if only one argument is passed
+  // Extend jQuery itself if only one argument is passed
+  // 在只有一个参数的时候，扩展为 jQuery 的静态方法或者 jQuery.fn 的实例方法
 	if ( i === length ) {
 		target = this;
 		i--;
@@ -175,6 +176,7 @@ jQuery.extend = jQuery.fn.extend = function() {
 					( copyIsArray = jQuery.isArray( copy ) ) ) ) {
 
 					if ( copyIsArray ) {
+            // 重置为 false
 						copyIsArray = false;
 						clone = src && jQuery.isArray( src ) ? src : [];
 
